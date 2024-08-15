@@ -15,7 +15,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
 # Initialize Whisper model and processor
-processor = WhisperProcessor.from_pretrained("openai/whisper-base")
+processor = WhisperProcessor.from_pretrained("openai/whisper-small")
 asr_model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-base").to(device)
 
 # Set target language (can be changed by user)
