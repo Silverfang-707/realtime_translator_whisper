@@ -16,7 +16,7 @@ print(f"Using device: {device}")
 
 # Initialize Whisper model and processor
 processor = WhisperProcessor.from_pretrained("openai/whisper-tiny")
-asr_model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-tiny").to(device)
+asr_model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-small").to(device)
 
 # Define available models
 model_dict = {
